@@ -4,7 +4,7 @@
   "description": "Simple API to scrape article text using Playwright",
   "main": "index.js",
   "scripts": {
-    "install": "playwright install --with-deps",
+    "postinstall": "npx playwright install chromium",
     "start": "node index.js"
   },
   "dependencies": {
