@@ -15,7 +15,7 @@ app.post("/scrape", async (req, res) => {
     const page = await browser.newPage();
     await page.goto(url, { waitUntil: "domcontentloaded", timeout: 60000 });
 
-    await page.waitForTimeout(2000); // wait for content to load
+    await page.waitForTimeout(2000);
 
     const articleText = await page.evaluate(() => {
       const article = document.querySelector("article");
